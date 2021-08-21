@@ -14,12 +14,12 @@
         "ru": "While DOOM was ported to many platforms throughout its lifetime, Quake only saw two ports due to its much higher system requirements. One of those ports was to a 32-bit console, and the other was Quake 64. While both ports featured modified versions of the original levels in order to run on the hardware at the time, Quake 64 featured a few changes that differentiated itself from the original 1996 release. Colored lighting, a brand new soundtrack by acclaimed composer Aubrey Hodges, and two player split screen multiplayer were all unique to this version of the game. The unique nature of Quake 64 has caused it to be looked back on fondly by some players over the years, which is why we are happy to be able to bring it into modern times, with the original soundtrack intact."
       },
       "gamedir": "q64",
-      "download": "https://d13lkw7j6mfai6.cloudfront.net/q64.pak",
+      "download": "q64.pak",
       "screenshots": [
-        "https://d13lkw7j6mfai6.cloudfront.net/q641.jpg",
-        "https://d13lkw7j6mfai6.cloudfront.net/q642.jpg",
-        "https://d13lkw7j6mfai6.cloudfront.net/q643.jpg",
-        "https://d13lkw7j6mfai6.cloudfront.net/q644.jpg"
+        "q641.jpg",
+        "q642.jpg",
+        "q643.jpg",
+        "q644.jpg"
       ],
       "id": "q64"
     }
