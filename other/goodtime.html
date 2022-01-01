@@ -29,11 +29,10 @@
         var date = new Date;
         var epoch = (date.getTime() / 1000) - 1640995200;
         var good = epoch / 86400;
-
         document.getElementById("day").innerHTML = good.toString().substr(0,7);
         document.getElementById("monthyear").innerHTML = "Month: " + Math.floor(good / 10) + " // Years: " + Math.floor(good / 100);
     }
 
     calculateTime();
-    setInterval(calculateTime, 1000);
+    setInterval(calculateTime, 10);
 </script>
