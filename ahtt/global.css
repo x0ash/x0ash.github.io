@@ -1,0 +1,38 @@
+body {
+	width: 640px;
+	max-width: 640px;
+	font-family: "Arial", sans-serif;
+	padding-left: 10px;
+	transform: scale(125%);
+	transform-origin: left top;
+	padding-bottom: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.published_date {
+	padding-left: 20px;
+	margin-top: -10px;
+	font-weight: normal;
+}
+
+@keyframes hot_take_flash {
+	0% {
+		color: red;
+	}
+	50% {
+		color: darkred;
+	}
+	100% {
+		color: red;
+	}
+}
+
+.hot_take {
+	animation-name: hot_take_flash;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	margin-top: -10px;
+}
