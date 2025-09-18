@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<style>
+    @font-face {
+        font-family:drumFont;
+        src: url(drumFont.ttf);             /*The font is custom created as I couldn't find any suitable options for free. */
+    }
+
+    body {
+        font-family: drumFont;
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .info {
+        font-family: sans-serif;        /*I use .info to escape the otherwise font family of DrumFont. */
+        font-size: 1vw;
+
+</style>
+
+<html>
+    <head>
+        <title>Randomly Generated Basic Drum Sequences</title>
+    </head>
+
+    <body>
+    	<p class="info">Refresh to randomise again!</p>
+        <div id="mainSection">
+
+        </div>
+
+        <p class="info">Randomly Generated Basic Drum Sequences
+        <br>Made by SP33D - 2019</p>
+    </body>
+    
+</html>
+
+<script>
+    var grooves = ["becacadcac","becaecacac","bcaecacadc","beacadac","becacacadc","becacaedcac","becaecadcac","becacaecadc","becaecadcaec", "bcacaecadc"];            //This makes more sense on the page as Drum Font uses characters a-e. Here, it is simply the possible sequences.
+
+    function generateRandom() {
+        return Math.floor(Math.random() * (grooves.length - 1));        //I use floor to round the 'index number' to something suitable for arrays. Floor in particular was used to ensure that the number it rounds to always stays within the bounds of the array.
+    }
+
+    var noteCount = 0;
+    var randomNumber = generateRandom();
+    var finalString = "";
+
+    for (var i = 0; i < 8; i++) {          //This is the loop that generates the 8 lines that appears on the webpage.
+        while (noteCount != 16) {           //Usually there would be more maths here but I decided while making the site every bar will be 4 beats long. This means that noteCount will guaranteed become 16. In hindsight, I could have used another for loop, but it was more convenient just to leave it how it was.
+	        noteCount += 4;
+	        finalString += grooves[randomNumber];
+	        randomNumber = generateRandom();
+        }
+
+        document.getElementById("mainSection").innerHTML += "<p>" + finalString + "b</p>";          //This section is simply to format the page correctly - without this the small divider at the end would be missing, and the page wouldn't return onto a new line. This is more reliable than using some form of CSS formatting as that could become dependent on screen width, which would make it difficult in practice to read.
+        noteCount = 0;
+        randomNumber = generateRandom();            //These variables are just resetting values if needed for the next cycle round
+        finalString = "";
+    }
+
+</script>

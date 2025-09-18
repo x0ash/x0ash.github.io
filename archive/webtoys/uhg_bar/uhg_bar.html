@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<!--I made all this in 6-ish hours. I think it's a nice replacement for an MP4 that I would have to custom make for everyone and remake every time a change is made.-->
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>UHG Bar</title>
+</head>
+<body>
+    <div class="barDiv" id="barDiv">
+        <div class="barInner" id="barInner">
+            <div style="height:30px;"><span style="font-family: Icons;font-size:20px;height:30px;">u</span></div>
+            <div style="text-align:center;height:30px;" id="barWatchingText">You're watching [name]</div>
+            <div style="text-align: center;height:30px;">Upper Hand Gaming Network</div>
+            <marquee direction="right" scrollamount="0" style="margin-left: 25%;height:30px;max-height:30px;margin-bottom:-5px;">
+                <div class="streamers">
+                    | <span style="color: #11cc11">shrunk | <span style="font-family: Icons">T</span> Shrunk8 | <span style="font-family: Icons">t</span> @sshrunkk</span> |
+                    <span style="color: #ffff00">oblivion | <span style="font-family: Icons">T</span> SirOblivion | <span style="font-family: Icons">t</span>  @SirOblivion</span> |
+                    <span style="color: #00ffff">Venni | <span style="font-family: Icons">T</span> venni012 | <span style="font-family: Icons">t</span> @venniparty</span> |
+                </div>
+            </marquee>
+            <div id="barCustomMessage" style="height:30px;"></div>
+        </div>
+    </div>
+
+    <div style="margin: 0px -8px 0px -8px;padding:20px 8px 0px 8px;background-color:#fff;display:block;position: fixed;width:100%;height:100%;font-family:'Segoe UI'">
+        <div class="preview"><span id="previewText">You're Watching [Name]</span><span style="color:red;font-size:8px;position:fixed;transform: translateY(300%);overflow: hidden">Preview</span></div>
+        <span style="font-size:30px;font-weight:bold;">URL MAKER</span>
+        <br /><b style="color: red;">REQUIRED</b>
+        <br />Channel Name: <input type="text" onchange="updatePreview()" id="channelName" />
+        <br />Colour: <input type="color" onchange="hexArea.value = this.value.replace('#','');updatePreview()" id="colorPicker" /> Hex: #<input type="text" style="width:80px" onchange="colorPicker.value = '#' + this.value;updatePreview()" id="hexArea" value="ffffff" />
+        <br />Time between popups: <input type="number" style="width:40px;" onchange="waitingTime = parseFloat(this.value)" value="0" id="waitDuration" /> minutes
+        <div class="preview"><span id="msgPreviewText">Custom Message</span><span style="color:red;font-size:8px;position:fixed;transform: translateY(300%);overflow: hidden">Preview</span></div>
+        <br /><br /><b style="color: red;">OPTIONAL</b>
+        <br />Custom Message: <input type="text" onchange="updateCustomMessagePreview()" id="customMessageInput" />
+        <br />Custom Message Colour: <input type="color" onchange="msgHexArea.value = this.value.replace('#','');updateCustomMessagePreview()" id="msgColorPicker" /> Hex: #<input type="text" style="width:80px" onchange="msgColorPicker.value = '#' + this.value;updateCustomMessagePreview()" id="msgHexArea" value="ffffff" />
+        <br /><button onclick="createURL()">Create URL</button>
+        <br /><b><u id="finalURL"></u></b>
+
+        <p>
+            <span style="font-size:20px;font-weight:bold;">Instructions:</span>
+            <br /><span style="margin-right: 50px;position: absolute;">Enter in all your details, and click Create URL. Create a browser source in OBS and set the URL to the underlined text. Set the width to 1920px and the height to 30px. Then put the browser source at the bottom. OPTIONAL: Lock it to stop you from accidentally moving it.
+            <br /><br />
+            <b>EXTRA INFORMATION:</b>
+            <br />I've already made some colour/hex values for the bar which I will put below:
+            <br />Shrunk - 11cc11
+            <br />Oblivion - ffff00
+            <br />Venni - 2266ff
+            <br /><br />
+            Feel free to use these but if you pick a different colour then please let me know what the new colour/hex value you chose was (so I can update the colours on the members list)
+            <br /><br />
+            <b>Changelog:</b>
+            <br />31/05/2020 - Initial creation
+            <br />01/06/2020 - Allowed decimals when entering time between popups
+            <br />06/06/2020 - Converted all icons used to be a font - convenience
+            <br />08/06/2020 - Organised code
+            <br />07/07/2021 - Added custom message support, now infinitely expandable
+        </span></p>
+    </div>
+</body>
+
+<!--Made by SP33D-->
+
+</html>
+
+<script src="script.js"></script>

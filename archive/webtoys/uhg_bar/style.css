@@ -1,0 +1,165 @@
+﻿@font-face {
+    font-family: LemonMilk;
+    src: url(LemonMilk.otf) format('opentype');
+}
+
+@font-face {
+    font-family: Icons;
+    src: url(icons.ttf);
+}
+
+input {
+    height: 16px;
+}
+
+.barDiv {
+    background-color: #000;
+    max-height: 30px;
+    height: 30px;
+    margin: 0px -8px 0px -8px;
+    text-align: center;
+    animation: bar 17s ease;
+    font-family: LemonMilk;
+    color: white;
+    z-index: -1;
+}
+
+.streamers {
+    height:30px;
+    max-height:30px;
+}
+
+.barInner {
+    /*animation: barContent 20s ease;*/
+    transition-timing-function: ease;
+    transition-duration: 0.7s;
+    padding-top: 4px;
+}
+
+@keyframes bar {
+    0% {
+        transform: translateY(30px);
+    }
+
+    5% {
+        transform: translateY(0px);
+    }
+
+    95% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes barContentBackup {
+    0% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(0px);
+    }
+
+    13% {
+        transform: translateY(-33px);
+    }
+
+    23% {
+        transform: translateY(-33px);
+    }
+
+    26% {
+        transform: translateY(-56px);
+    }
+
+    36% {
+        transform: translateY(-56px);
+    }
+
+    39% {
+        transform: translateY(-84px);
+    }
+
+    69% {
+        transform: translateY(-84px);
+    }
+
+    78% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes barContent {
+    0% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(0px);
+    }
+
+    13% {
+        transform: translateY(-33px);
+    }
+
+    23% {
+        transform: translateY(-33px);
+    }
+
+    26% {
+        transform: translateY(-66px);
+    }
+
+    36% {
+        transform: translateY(-66px);
+    }
+
+    39% {
+        transform: translateY(-99px);
+    }
+
+    69% {
+        transform: translateY(-99px);
+    }
+
+    78% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        color: #ff0000;
+    }
+
+    20% {
+        color: #ffff00;
+    }
+
+    40% {
+        color: #00ff00;
+    }
+
+    60% {
+        color: #00ffff;
+    }
+
+    80% {
+        color: #0000ff;
+    }
+
+    100% {
+        color: #ff00ff;
+    }
+}
+
+.preview {
+    font-family: LemonMilk;
+    position: fixed;
+    margin-left: 50%;
+    padding: 7px;
+    background-color: #000;
+}
